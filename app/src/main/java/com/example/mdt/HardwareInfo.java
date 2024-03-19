@@ -1,37 +1,47 @@
 package com.example.mdt;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class HardwareInfo extends AppCompatActivity {
+    CardView battery, cpu, memory;
+
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hardware_info);
-        CardView battery = findViewById(R.id.card_battery);
+        battery = (CardView) findViewById(R.id.card_battery);
+        cpu = (CardView) findViewById(R.id.card_cpu);
+        memory = (CardView) findViewById(R.id.card_storage);
+
         battery.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                Intent intent = new Intent(HardwareInfo.this, Battery.class);
-                startActivity(intent);
+            @Override
+            public void onClick(View view) {
+                Intent batteryIntent = new Intent(getApplicationContext(), Battery.class);
+                startActivity(batteryIntent);
             }
         });
-        CardView processor = findViewById(R.id.card_cpu);
-        processor.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                Intent intent = new Intent(HardwareInfo.this, CPU.class);
-                startActivity(intent);
+
+        cpu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cpuIntent = new Intent(getApplicationContext(), CPU.class);
+                startActivity(cpuIntent);
             }
         });
-        CardView memory = findViewById(R.id.card_storage);
+
         memory.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                Intent intent = new Intent(HardwareInfo.this, Memory.class);
-                startActivity(intent);
+            @Override
+            public void onClick(View view) {
+                Intent memIntent = new Intent(getApplicationContext(), Memory.class);
+                startActivity(memIntent);
             }
         });
     }
+
 }

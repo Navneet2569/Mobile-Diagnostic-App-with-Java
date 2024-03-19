@@ -19,7 +19,7 @@
         android:layout_centerHorizontal="true"
         android:text="Processor Info"
         android:textColor="@android:color/white"
-        android:textSize="40dp" />
+        android:textSize="28dp" />
 
     <ScrollView
         android:layout_width="match_parent"

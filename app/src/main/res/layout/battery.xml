@@ -19,7 +19,7 @@
         android:layout_centerHorizontal="true"
         android:text="Battery Info"
         android:textColor="@android:color/white"
-        android:textSize="40dp" />
+        android:textSize="28dp" />
 
     <TextView
         android:id="@+id/textBattery"

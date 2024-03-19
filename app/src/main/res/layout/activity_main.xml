@@ -113,16 +113,14 @@
 
     <Button
         android:id="@+id/report"
-        android:layout_width="154dp"
-        android:layout_height="69dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/text_storage"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#FFFFFF"
-        android:text="START"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textStyle="bold" />
+        android:text="Generate Report"
+        android:textAlignment="center" />
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
